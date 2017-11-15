@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'bat \'mvn -B -DskipTests clean package\''
+        bat 'echo "Building"'
       }
     }
     stage('Test') {
@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Deliver') {
       steps {
-        sh 'bat \'./jenkins/scripts/deliver.sh\''
+        git 'https://github.com/Hirondina/1.git'
       }
     }
   }
