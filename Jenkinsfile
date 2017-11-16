@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'bat `mvn test`'
+        bat 'echo "testing"'
       }
     }
     stage('Deliver') {
